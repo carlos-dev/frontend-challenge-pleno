@@ -17,7 +17,9 @@ export const ContentHeader = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  position: relative;
+  z-index: 1;
+  
   button {
     padding: 2vmin 4vmin;
     border-radius: 0.5vmin;
