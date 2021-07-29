@@ -4,6 +4,9 @@ export const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   padding: 3vmin 0;
+  margin: 0;
+  position: absolute;
+  top: 0;
 `;
 
 export const Link = styled.a`
