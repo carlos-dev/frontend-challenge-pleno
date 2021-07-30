@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
-export const Content = styled.div`
+export const Content = styled.section`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0vmin 21vmin;
+  margin: 6vmin 21vmin;
 
   img {
     width: 27vmin;
