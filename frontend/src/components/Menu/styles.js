@@ -45,6 +45,7 @@ export const Logo = styled.a`
 
   span {
     color: #fff;
+    font-size: 2.6vmin;
   }
 `;
 

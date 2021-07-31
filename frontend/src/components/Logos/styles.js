@@ -9,4 +9,8 @@ export const Content = styled.section`
   img {
     width: 27vmin;
   }
+
+  .swiper-slide {
+    width: 30vmin;
+  }
 `;
