@@ -1,4 +1,5 @@
-import React from 'react';
+/* eslint-disable no-undef */
+import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/swiper-bundle.min.css';
@@ -11,14 +12,24 @@ import audiojungle from '../../images/audiojungle.png';
 import themeforest from '../../images/themeforest.png';
 import codecanyon from '../../images/codecanyon.png';
 
-
 const Logos = () => {
+  const [clients, setClients] = useState([]);
+
+  useEffect(() => {
+    fetch('http://localhost:3000/clients', {
+      method: 'GET',
+      headers: { 'Content-Type': 'application/json' },
+    })
+      .then((res) => res.json())
+      .then((json) => setClients(json));
+  }, []);
+
   return (
     <S.Content className="swiper-logos">
       <Swiper
         spaceBetween={50}
-        slidesPerView='auto'
-        centeredSlides={true}
+        slidesPerView="auto"
+        centeredSlides
         breakpoints={{
           1536: {
             slidesPerView: 4,
@@ -45,30 +56,26 @@ const Logos = () => {
           700: {
             slidesPerView: 2,
             centeredSlides: false,
-          }
+          },
         }}
       >
-        <SwiperSlide>
-          <img src={graphicriver} alt="" />
-        </SwiperSlide>
+        {clients.length ? (
+          clients.map((item) => (
 
-        <SwiperSlide>
-          <img src={themeforest} alt="" />
-        </SwiperSlide>
+            <SwiperSlide>
+              <img src={item.image} alt="" />
+            </SwiperSlide>
+          ))
 
-        <SwiperSlide>
-          <img src={audiojungle} alt="" />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <img src={codecanyon} alt="" />
-        </SwiperSlide>
+        ) : (
+          <span>carregando...</span>
+        )}
       </Swiper>
 
       <div className="swiper-bullet" />
 
     </S.Content>
   );
-}
+};
 
 export default Logos;
