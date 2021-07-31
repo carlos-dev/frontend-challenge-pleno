@@ -4,6 +4,10 @@ export const Content = styled.section`
   display: flex;
   justify-content: center;
   margin: 18vmin auto 27vmin;
+
+  .swiper-slide {
+    width: 60vmin;
+  }
 `;
 
 export const Box = styled.div`
@@ -17,6 +21,10 @@ export const Box = styled.div`
   align-items: center;
   justify-content: center;
   padding: 0 4vmin;
+
+  @media (max-width: 1040px) {
+    margin: auto;
+  }
 `;
 
 export const ImgBox = styled.img`
