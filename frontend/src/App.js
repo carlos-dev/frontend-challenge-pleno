@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Logos from './components/Logos';
 import Boxes from './components/Boxes';
 import Contact from './components/Contact';
+import Newsletter from './components/Newsletter';
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
       <Logos />
       <Boxes />
       <Contact />
+      <Newsletter />
     </div>
   );
 }
