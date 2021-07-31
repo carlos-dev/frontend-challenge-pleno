@@ -35,6 +35,8 @@ export const Input = styled.input`
   border-radius: 0.2rem;
   margin-right: 3vmin;
   width: 52vmin;
+  font-size: 2.5vmin;
+  font-family: 'Roboto', sans-serif;
 
   ::placeholder {
     color: #4d5e6c;
@@ -54,4 +56,6 @@ export const BtnSubmit = styled.button`
   padding: 2vmin 7vmin;
   color: #fff;
   border-radius: 0.2rem;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.6vmin;
 `;

@@ -17,6 +17,7 @@ export const Content = styled.div`
 
   @media (max-width: 1080px) {
     justify-content: center;
+    height: 58vmin;
   }
 `;
 
