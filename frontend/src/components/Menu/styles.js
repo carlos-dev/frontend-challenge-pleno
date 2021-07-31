@@ -7,6 +7,37 @@ export const Nav = styled.nav`
   margin: 0;
   position: absolute;
   top: 0;
+  transition: transform 0.3s;
+  
+  @media (max-width: 920px) {
+    justify-content: flex-start;
+    width: 55vmin !important;
+    position: fixed;
+    left: 0;
+    height: 100%;
+    padding: 3vmin 0 0 13vmin;
+    z-index: 2;
+    flex-direction: column;
+    background: #43d9ce;
+    transform:  ${props => props.active ? "translateX(0)" : "translateX(-100%)"};
+  }
+`;
+
+export const NavRight = styled.div`
+  display: flex;
+
+  @media (max-width: 920px) {
+    flex-direction: column;
+    align-items: baseline;
+  }
+`;
+
+export const NavLeft = styled.div`
+  display: flex;
+
+  @media (max-width: 920px) {
+    flex-direction: column;
+  }
 `;
 
 export const Link = styled.a`
@@ -15,6 +46,10 @@ export const Link = styled.a`
   margin-right: 5vmin;
   height: 4.4vmin;
   position: relative;
+
+  @media (max-width: 920px) {
+    margin: 1vmin 3vmin 1vmin 0vmin;
+  }
 
   ::before {
     content: "";
@@ -59,6 +94,53 @@ export const LogoRight = styled.span`
   font-weight: 100;
 `;
 
+export const Search = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 5vmin;
+  position: relative;
+  width: 30vmin;
+  
+  .active {
+    width: 100%;
+    opacity: 1;
+
+    @media (max-width: 920px) {
+      width: 86%;
+      padding-left: 3vmin;
+      font-family: 'Raleway', sans-serif;
+    }
+  }
+
+  @media (max-width: 920px) {
+    margin: 1vmin 3vmin 1vmin 0vmin;
+    flex-direction: row-reverse;
+    position: relative;
+    z-index: 1;
+  }
+`;
+
+export const Input = styled.input`
+  width: 0;
+  outline: none;
+  opacity: 0;
+  position: absolute;
+  right: 4vmin;
+  padding: 0 0.5vmin;
+  font-size: 2vmin;
+  background: transparent;
+  border: none;
+  border-bottom: 0.3vmin solid #fff;
+  color: #fff;
+  transition: opacity 0.5s, width 0.4s;
+`;
+
+export const Button = styled.button`
+  position: relative;
+  z-index: 2;
+`;
+
 export const BtnHeader = styled.button`
   color: #fff;
   font-size: 2.2vmin;
@@ -66,9 +148,53 @@ export const BtnHeader = styled.button`
   border: 1px solid #fff;
   padding: 0.5vmin 1.3vmin;
   transition: background 0.3s, color 0.3s;
+  font-family: 'Raleway', sans-serif;
 
   :hover {
     color: #000;
     background: #fff;
+  }
+`;
+
+export const MenuHamburger = styled.div`
+  position: fixed;
+  display: none;
+  left: 4vmin;
+  top: 4vmin;
+  z-index: 3;
+
+  @media (max-width: 920px) {
+    display: block;
+  }
+
+  span {
+    display: block;
+    color: rgb(255, 255, 255);
+    height: 21px;
+    width: 30px;
+    border-top: 3px solid;
+    cursor: pointer;
+    z-index: 12;
+    backface-visibility: hidden;
+  
+    ::before {
+      content: "";
+      display: block;
+      height: 3px;
+      margin-top: 6px;
+      background: currentcolor;
+      position: relative;
+      transition: transform 0.3s ease 0s;
+    }
+    
+    ::after {
+      content: "";
+      display: block;
+      height: 3px;
+      margin-top: 6px;
+      background: currentcolor;
+      position: relative;
+      transition: transform 0.3s ease 0s;
+    }
   }
 `;
