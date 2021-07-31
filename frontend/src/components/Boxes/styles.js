@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Content = styled.section`
   display: flex;
   justify-content: center;
-  margin: 18vmin auto 27vmin;
+  margin: 18vmin auto 7vmin;
 
   .swiper-slide {
     width: 60vmin;
