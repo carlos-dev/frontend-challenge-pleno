@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/swiper-bundle.min.css';
@@ -11,50 +11,49 @@ import card from '../../images/card.png';
 import safeBox from '../../images/safeBox.png';
 
 const Boxes = () => {
+  const [services, setServices] = useState([]);
+  const arrayImage = [speedometer, card, safeBox];
+
+  useEffect(() => {
+    fetch('http://localhost:3000/services', {
+      method: 'GET',
+      headers: { 'Content-Type': 'application/json' },
+    })
+      .then((res) => res.json())
+      .then((json) => setServices(json));
+  }, []);
+
+  console.log(services);
   return (
     <S.Content>
-      <Swiper
-        slidesPerView={1}
-        centeredSlides
-        breakpoints={{
-          1040: {
-            slidesPerView: 'auto',
-            centeredSlides: false,
-          },
-        }}
-      >
-        <SwiperSlide>
-          <S.Box boxBlue>
-            <S.ImgBox src={speedometer} />
+      {services.length ? (
+        <Swiper
+          slidesPerView={1}
+          centeredSlides
+          breakpoints={{
+            1040: {
+              slidesPerView: 'auto',
+              centeredSlides: false,
+            },
+          }}
+        >
+          {services.map((item) => (
+            <SwiperSlide key={item.id}>
+              <S.Box boxBlue={item.id % 2 !== 0}>
+                <S.ImgBox src={item.image} />
 
-            <S.Title>Estamos integrados</S.Title>
+                <S.Title>{item.title}</S.Title>
 
-            <S.Text>Os títulos e descrições destes itens devem ser requisitados de uma API fictícia. Utilize o json-server para simular uma API.</S.Text>
-          </S.Box>
-        </SwiperSlide>
-        
-        <SwiperSlide>
-          <S.Box>
-            <S.ImgBox src={card} />
-
-            <S.Title>Estamos integrados</S.Title>
-
-            <S.Text>Os títulos e descrições destes itens devem ser requisitados de uma API fictícia. Utilize o json-server para simular uma API.</S.Text>
-          </S.Box>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <S.Box boxBlue>
-            <S.ImgBox src={safeBox} />
-
-            <S.Title>Estamos integrados</S.Title>
-
-            <S.Text>Os títulos e descrições destes itens devem ser requisitados de uma API fictícia. Utilize o json-server para simular uma API.</S.Text>
-          </S.Box>
-        </SwiperSlide>
-      </Swiper>
+                <S.Text>{item.description}</S.Text>
+              </S.Box>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      ) : (
+        <span>carregando...</span>
+      )}
     </S.Content>
   );
-}
+};
 
 export default Boxes;
