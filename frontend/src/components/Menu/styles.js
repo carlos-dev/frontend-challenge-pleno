@@ -9,7 +9,7 @@ export const Nav = styled.nav`
   top: 0;
   transition: transform 0.3s;
   
-  @media (max-width: 920px) {
+  @media (max-width: 1080px) {
     justify-content: flex-start;
     width: 55vmin !important;
     position: fixed;
@@ -19,14 +19,14 @@ export const Nav = styled.nav`
     z-index: 2;
     flex-direction: column;
     background: #43d9ce;
-    transform:  ${props => props.active ? "translateX(0)" : "translateX(-100%)"};
+    transform:  ${(props) => (props.active ? 'translateX(0)' : 'translateX(-100%)')};
   }
 `;
 
 export const NavRight = styled.div`
   display: flex;
 
-  @media (max-width: 920px) {
+  @media (max-width: 1080px) {
     flex-direction: column;
     align-items: baseline;
   }
@@ -35,7 +35,7 @@ export const NavRight = styled.div`
 export const NavLeft = styled.div`
   display: flex;
 
-  @media (max-width: 920px) {
+  @media (max-width: 1080px) {
     flex-direction: column;
   }
 `;
@@ -47,8 +47,9 @@ export const Link = styled.a`
   height: 4.4vmin;
   position: relative;
 
-  @media (max-width: 920px) {
+  @media (max-width: 1080px) {
     margin: 1vmin 3vmin 1vmin 0vmin;
+    font-size: 3.6vmin;
   }
 
   ::before {
@@ -81,6 +82,10 @@ export const Logo = styled.a`
   span {
     color: #fff;
     font-size: 2.6vmin;
+
+    @media (max-width: 1080px) {
+      font-size: 3.6vmin;
+    }
   }
 `;
 
@@ -106,14 +111,14 @@ export const Search = styled.div`
     width: 100%;
     opacity: 1;
 
-    @media (max-width: 920px) {
+    @media (max-width: 1080px) {
       width: 86%;
       padding-left: 3vmin;
       font-family: 'Raleway', sans-serif;
     }
   }
 
-  @media (max-width: 920px) {
+  @media (max-width: 1080px) {
     margin: 1vmin 3vmin 1vmin 0vmin;
     flex-direction: row-reverse;
     position: relative;
@@ -139,6 +144,12 @@ export const Input = styled.input`
 export const Button = styled.button`
   position: relative;
   z-index: 2;
+
+  svg {
+    @media (max-width: 1080px) {
+      font-size: 3.2vmin;
+    }
+  }
 `;
 
 export const BtnHeader = styled.button`
@@ -149,6 +160,12 @@ export const BtnHeader = styled.button`
   padding: 0.5vmin 1.3vmin;
   transition: background 0.3s, color 0.3s;
   font-family: 'Raleway', sans-serif;
+
+  @media (max-width: 1080px) {
+    margin: 1vmin 3vmin 1vmin 0vmin;
+    font-size: 3.2vmin;
+    border-radius: 3vmin;
+  }
 
   :hover {
     color: #000;
@@ -162,8 +179,10 @@ export const MenuHamburger = styled.div`
   left: 4vmin;
   top: 4vmin;
   z-index: 3;
-
-  @media (max-width: 920px) {
+  background: #43D9CE;
+  padding: 1vmin;
+  
+  @media (max-width: 1080px) {
     display: block;
   }
 

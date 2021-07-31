@@ -31,7 +31,7 @@ export const ContentHeader = styled.div`
 `;
 
 export const Title = styled.h1`
-  color: #fff;
+  color: #fff; 
   font-size: 7vmin;
   font-weight: bold;
   font-family: 'Roboto', sans-serif;

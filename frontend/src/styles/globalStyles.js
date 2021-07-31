@@ -20,7 +20,7 @@ const GlobalStyles = createGlobalStyle`
 
   .container {
     max-width: 83%;
-    width: 100%;
+    width: 100%; 
     margin: auto;
   }
 `;

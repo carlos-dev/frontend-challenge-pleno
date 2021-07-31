@@ -1,3 +1,5 @@
+import React from 'react';
+
 import './App.css';
 
 import GlobalStyles from './styles/globalStyles';
@@ -8,18 +10,16 @@ import Contact from './components/Contact';
 import Newsletter from './components/Newsletter';
 import Footer from './components/Footer';
 
-const App = () => {
-  return (
-    <div>
-      <GlobalStyles />
-      <Header /> 
-      <Logos />
-      <Boxes />
-      <Contact />
-      <Newsletter />
-      <Footer />
-    </div>
-  );
-}
+const App = () => (
+  <div>
+    <GlobalStyles />
+    <Header />
+    <Logos />
+    <Boxes />
+    <Contact />
+    <Newsletter />
+    <Footer />
+  </div>
+);
 
 export default App;

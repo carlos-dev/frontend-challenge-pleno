@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { FiSearch } from 'react-icons/fi';
 
 import * as S from './styles';
@@ -10,7 +10,7 @@ const Menu = () => {
   return (
     <>
       <S.MenuHamburger onClick={() => setMenuActive(!menuActive)}>
-        <span></span>
+        <span />
       </S.MenuHamburger>
 
       <S.Nav className="container" active={menuActive}>
@@ -29,7 +29,7 @@ const Menu = () => {
 
         <S.NavRight>
           <S.Search>
-            <S.Button onClick={() =>  setInputActive(!inputActive)}><FiSearch color="#fff" fontSize="2.6vmin" /></S.Button>
+            <S.Button onClick={() => setInputActive(!inputActive)}><FiSearch color="#fff" fontSize="2.6vmin" /></S.Button>
             <S.Input type="search" id="search" className={inputActive && 'active'} />
           </S.Search>
           <S.Link href="">Ajuda</S.Link>
@@ -41,6 +41,6 @@ const Menu = () => {
       </S.Nav>
     </>
   );
-}
+};
 
 export default Menu;
