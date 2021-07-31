@@ -6,6 +6,7 @@ import Logos from './components/Logos';
 import Boxes from './components/Boxes';
 import Contact from './components/Contact';
 import Newsletter from './components/Newsletter';
+import Footer from './components/Footer';
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
       <Boxes />
       <Contact />
       <Newsletter />
+      <Footer />
     </div>
   );
 }
