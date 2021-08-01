@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation } from 'swiper/core';
@@ -7,15 +8,10 @@ import 'swiper/swiper-bundle.min';
 
 import * as S from './styles';
 
-// import speedometer from '../../images/speedometer.png';
-// import card from '../../images/card.png';
-// import safeBox from '../../images/safeBox.png';
-
 SwiperCore.use([Navigation]);
 
 const Boxes = () => {
   const [services, setServices] = useState([]);
-  // const arrayImage = [speedometer, card, safeBox];
 
   useEffect(() => {
     fetch('https://frontend-challenge-pleno.herokuapp.com/services', {
