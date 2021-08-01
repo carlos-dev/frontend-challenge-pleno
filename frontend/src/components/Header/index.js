@@ -14,7 +14,7 @@ SwiperCore.use([Navigation]);
 
 const Header = () => {
   const [index, setIndex] = useState(0);
-
+  const slides = [1, 2, 3];
   const colorsGradient = [
     ['#16e1cc', '#9e22f5'],
     ['#83B02A', '#C2E37F'],
@@ -29,44 +29,20 @@ const Header = () => {
         onSlideChange={(swipe) => setIndex(swipe.activeIndex)}
         navigation
       >
-        <SwiperSlide>
-          <S.ContentHeader>
-            <S.Title>Recrie este Banner!</S.Title>
+        {slides.map((item) => (
+          <SwiperSlide key={item}>
+            <S.ContentHeader>
+              <S.Title>Recrie este Banner!</S.Title>
 
-            <S.Text>Além deste banner inicial, desenvolva esta área com possibilidade de mais banners, com outras imagens ou vídeo ao fundo também. Utilize toda sua criativade para dar vida a este site, mas atenção para o responsivo é importante que o site se adapte e fique legível.</S.Text>
+              <S.Text>Além deste banner inicial, desenvolva esta área com possibilidade de mais banners, com outras imagens ou vídeo ao fundo também. Utilize toda sua criativade para dar vida a este site, mas atenção para o responsivo é importante que o site se adapte e fique legível.</S.Text>
 
-            <div>
-              <S.BtnDemo>Sobre o SiteDemo</S.BtnDemo>
-              <S.BtnStart>Começar</S.BtnStart>
-            </div>
-          </S.ContentHeader>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <S.ContentHeader>
-            <S.Title>Recrie este Banner!</S.Title>
-
-            <S.Text>Além deste banner inicial, desenvolva esta área com possibilidade de mais banners, com outras imagens ou vídeo ao fundo também. Utilize toda sua criativade para dar vida a este site, mas atenção para o responsivo é importante que o site se adapte e fique legível.</S.Text>
-
-            <div>
-              <S.BtnDemo>Sobre o SiteDemo</S.BtnDemo>
-              <S.BtnStart>Começar</S.BtnStart>
-            </div>
-          </S.ContentHeader>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <S.ContentHeader>
-            <S.Title>Recrie este Banner!</S.Title>
-
-            <S.Text>Além deste banner inicial, desenvolva esta área com possibilidade de mais banners, com outras imagens ou vídeo ao fundo também. Utilize toda sua criativade para dar vida a este site, mas atenção para o responsivo é importante que o site se adapte e fique legível.</S.Text>
-
-            <div>
-              <S.BtnDemo>Sobre o SiteDemo</S.BtnDemo>
-              <S.BtnStart>Começar</S.BtnStart>
-            </div>
-          </S.ContentHeader>
-        </SwiperSlide>
+              <div>
+                <S.BtnDemo>Sobre o SiteDemo</S.BtnDemo>
+                <S.BtnStart>Começar</S.BtnStart>
+              </div>
+            </S.ContentHeader>
+          </SwiperSlide>
+        ))}
       </Swiper>
 
       <S.Wave src={wave1} className="wave" alt="" />

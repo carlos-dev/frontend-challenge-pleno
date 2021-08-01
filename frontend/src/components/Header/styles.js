@@ -13,7 +13,20 @@ export const Header = styled.header`
   align-items: center;
   position: relative;
 
-  .swiper-button-next:after, .swiper-button-prev:after {
+  .swiper-container {
+    padding: 2vmin 0;
+  }
+
+  .swiper-button-prev {
+    left: 4vmin;
+  }
+
+  .swiper-button-next {
+    right: 4vmin;
+  }
+
+  .swiper-button-next:after, 
+  .swiper-button-prev:after {
     font-size: 7vmin;
   }
 `;
@@ -32,6 +45,12 @@ export const ContentHeader = styled.div`
     color: #fff;
     margin: 0 4vmin;
     font-size: 2.5vmin;
+    transition-duration: 0.5s;
+
+    :hover {
+      transform: scale(1.2);
+      transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.3);
+    }
   }
 `;
 
