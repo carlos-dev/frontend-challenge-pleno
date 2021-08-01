@@ -13,6 +13,12 @@ export const Content = styled.div`
     font-size: 2.2vmin;
     color: #fff;
     letter-spacing: 0.1vmin;
+    transition-duration: 0.5s;
+
+    :hover {
+      transform: scale(1.2);
+      transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.3);
+    }
   }
 
   @media (max-width: 1080px) {
