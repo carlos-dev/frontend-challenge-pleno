@@ -15,7 +15,7 @@ export const Nav = styled.nav`
     position: fixed;
     left: 0;
     height: 100%;
-    padding: 3vmin 0 0 13vmin;
+    padding: 3vmin 0 0 17vmin;
     z-index: 2;
     flex-direction: column;
     background: #43d9ce;
@@ -48,8 +48,8 @@ export const Link = styled.a`
   position: relative;
 
   @media (max-width: 1080px) {
-    margin: 1vmin 3vmin 1vmin 0vmin;
-    font-size: 3.6vmin;
+    margin: 3vmin 3vmin 3vmin 0vmin;
+    font-size: 4vmin;
   }
 
   ::before {
@@ -147,7 +147,7 @@ export const Button = styled.button`
 
   svg {
     @media (max-width: 1080px) {
-      font-size: 3.2vmin;
+      font-size: 3.7vmin;
     }
   }
 `;
@@ -163,7 +163,7 @@ export const BtnHeader = styled.button`
 
   @media (max-width: 1080px) {
     margin: 1vmin 3vmin 1vmin 0vmin;
-    font-size: 3.2vmin;
+    font-size: 3.7vmin;
     border-radius: 3vmin;
   }
 
