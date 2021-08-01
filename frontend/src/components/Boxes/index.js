@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, { Navigation } from 'swiper/core';
 
 import 'swiper/swiper-bundle.min.css';
 import 'swiper/swiper-bundle.min';
@@ -9,6 +10,8 @@ import * as S from './styles';
 import speedometer from '../../images/speedometer.png';
 import card from '../../images/card.png';
 import safeBox from '../../images/safeBox.png';
+
+SwiperCore.use([Navigation]);
 
 const Boxes = () => {
   const [services, setServices] = useState([]);
@@ -30,6 +33,7 @@ const Boxes = () => {
         <Swiper
           slidesPerView={1}
           centeredSlides
+          navigation
           breakpoints={{
             1040: {
               slidesPerView: 'auto',

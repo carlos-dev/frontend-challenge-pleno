@@ -5,8 +5,31 @@ export const Content = styled.section`
   justify-content: center;
   margin: 18vmin auto 7vmin;
 
+  @media (max-width: 1040px) {
+    margin: 18vmin 21vmin 7vmin;
+  }
+  
+  @media (max-width: 1040px) {
+    margin: 18vmin 5vmin 7vmin;
+  }
+
   .swiper-slide {
     width: 60vmin;
+  }
+
+  .swiper-button-next, 
+  .swiper-button-prev {
+    display: none;
+    
+    @media (max-width: 1040px) {
+      display: flex;
+    }
+  }
+
+  
+  .swiper-button-next:after, 
+  .swiper-button-prev:after {
+    font-size: 7vmin;
   }
 `;
 
