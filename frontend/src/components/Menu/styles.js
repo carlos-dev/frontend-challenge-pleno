@@ -61,12 +61,8 @@ export const Link = styled.a`
     background: #fff;
     height: 0.5vmin;
     border-radius: 0.8vmin;
-    border-radius:
-    -webkit-transition-property: right;
     transition-property: right;
-    -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
-    -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out;
   }
 
