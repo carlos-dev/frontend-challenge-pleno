@@ -77,10 +77,10 @@ export const Logo = styled.a`
 
   span {
     color: #fff;
-    font-size: 2.6vmin;
+    font-size: 3.6vmin;
 
     @media (max-width: 1080px) {
-      font-size: 3.6vmin;
+      font-size: 4vmin;
     }
   }
 `;
@@ -179,7 +179,8 @@ export const MenuHamburger = styled.div`
   left: 4vmin;
   top: 4vmin;
   z-index: 3;
-  background: #43D9CEaa;
+  border: 1px solid #fff;
+  border-radius: 0.3vmin;
   padding: 1vmin;
 
   @media (max-width: 1080px) {
@@ -188,7 +189,7 @@ export const MenuHamburger = styled.div`
 
   span {
     display: block;
-    color: rgb(255, 255, 255);
+    color: #000;
     height: 21px;
     width: 30px;
     border-top: 3px solid;
