@@ -7,6 +7,7 @@ import 'swiper/swiper-bundle.min.css';
 import 'swiper/swiper-bundle.min';
 
 import * as S from './styles';
+import Loading from '../Loading';
 
 SwiperCore.use([Navigation]);
 
@@ -25,20 +26,18 @@ const Logos = () => {
   return (
     <S.Content className="swiper-logos">
       <Swiper
-        spaceBetween={50}
-        slidesPerView="auto"
+        slidesPerView={2}
         centeredSlides
         navigation
         breakpoints={{
           1536: {
             slidesPerView: 4,
-            spaceBetween: 240,
             navigation: true,
             centeredSlides: false,
           },
 
           1305: {
-            spaceBetween: 90,
+            slidesPerView: 4,
             centeredSlides: false,
           },
 
@@ -67,12 +66,11 @@ const Logos = () => {
             </SwiperSlide>
           ))
         ) : (
-          <span>carregando...</span>
+          <Loading />
         )}
       </Swiper>
 
       <div className="swiper-bullet" />
-
     </S.Content>
   );
 };
