@@ -18,7 +18,7 @@ const Boxes = () => {
   // const arrayImage = [speedometer, card, safeBox];
 
   useEffect(() => {
-    fetch('http://localhost:3000/services', {
+    fetch('https://frontend-challenge-pleno.herokuapp.com/services', {
       method: 'GET',
       headers: { 'Content-Type': 'application/json' },
     })
