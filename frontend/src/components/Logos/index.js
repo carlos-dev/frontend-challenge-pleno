@@ -8,18 +8,13 @@ import 'swiper/swiper-bundle.min';
 
 import * as S from './styles';
 
-import graphicriver from '../../images/graphicriver.png';
-// import audiojungle from '../../images/audiojungle.png';
-// import themeforest from '../../images/themeforest.png';
-// import codecanyon from '../../images/codecanyon.png';
-
 SwiperCore.use([Navigation]);
 
 const Logos = () => {
   const [clients, setClients] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3000/clients', {
+    fetch('https://frontend-challenge-pleno.herokuapp.com/clients', {
       method: 'GET',
       headers: { 'Content-Type': 'application/json' },
     })
@@ -65,12 +60,12 @@ const Logos = () => {
       >
         {clients.length ? (
           clients.map((item) => (
-
             <SwiperSlide key={item.id}>
-              <img src={graphicriver} alt="" />
+              <a href={item.link} target="_blank" rel="noopener noreferrer">
+                <img src={item.image} alt={item.title} />
+              </a>
             </SwiperSlide>
           ))
-
         ) : (
           <span>carregando...</span>
         )}
