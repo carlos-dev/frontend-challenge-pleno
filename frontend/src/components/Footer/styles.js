@@ -40,6 +40,7 @@ export const NavLink = styled.div`
   @media (max-width: 1080px) {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
   }
 `;
 
