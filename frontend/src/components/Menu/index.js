@@ -10,7 +10,7 @@ const Menu = () => {
   return (
     <>
       <S.MenuHamburger onClick={() => setMenuActive(!menuActive)}>
-        <span />
+        <span className={menuActive ? 'active' : undefined} />
       </S.MenuHamburger>
 
       <S.Nav className="container" active={menuActive}>
@@ -30,7 +30,7 @@ const Menu = () => {
         <S.NavRight>
           <S.Search>
             <S.Button onClick={() => setInputActive(!inputActive)}><FiSearch color="#fff" fontSize="2.6vmin" /></S.Button>
-            <S.Input type="search" id="search" className={inputActive && 'active'} />
+            <S.Input type="search" id="search" className={inputActive ? 'active' : undefined} />
           </S.Search>
           <S.Link href="">Ajuda</S.Link>
 

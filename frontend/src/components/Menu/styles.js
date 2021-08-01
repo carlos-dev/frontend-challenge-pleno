@@ -113,7 +113,7 @@ export const Search = styled.div`
 
     @media (max-width: 1080px) {
       width: 86%;
-      padding-left: 3vmin;
+      padding-left: 4vmin;
       font-family: 'Raleway', sans-serif;
     }
   }
@@ -139,6 +139,10 @@ export const Input = styled.input`
   border-bottom: 0.3vmin solid #fff;
   color: #fff;
   transition: opacity 0.5s, width 0.4s;
+
+  @media (max-width: 1080px)  {
+    font-size: 4vmin;
+  }
 `;
 
 export const Button = styled.button`
@@ -216,4 +220,20 @@ export const MenuHamburger = styled.div`
       transition: transform 0.3s ease 0s;
     }
   }
+
+  .active {
+    border-top-color: transparent;
+  }
+
+  .active::before {
+    margin-top: 0px;
+    top: 6px;
+    transform: rotate(135deg);
+  }
+
+  .active::after {
+    margin-top: 0px;
+    top: 2px;
+    transform: rotate(45deg);
+    }
 `;
