@@ -1,6 +1,7 @@
 /* eslint-disable no-undef */
 import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, { Navigation } from 'swiper/core';
 
 import 'swiper/swiper-bundle.min.css';
 import 'swiper/swiper-bundle.min';
@@ -11,6 +12,8 @@ import graphicriver from '../../images/graphicriver.png';
 import audiojungle from '../../images/audiojungle.png';
 import themeforest from '../../images/themeforest.png';
 import codecanyon from '../../images/codecanyon.png';
+
+SwiperCore.use([Navigation]);
 
 const Logos = () => {
   const [clients, setClients] = useState([]);
@@ -30,6 +33,7 @@ const Logos = () => {
         spaceBetween={50}
         slidesPerView="auto"
         centeredSlides
+        navigation
         breakpoints={{
           1536: {
             slidesPerView: 4,
@@ -63,7 +67,7 @@ const Logos = () => {
           clients.map((item) => (
 
             <SwiperSlide>
-              <img src={item.image} alt="" />
+              <img src={graphicriver} alt="" />
             </SwiperSlide>
           ))
 
