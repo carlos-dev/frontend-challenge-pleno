@@ -9,9 +9,9 @@ import 'swiper/swiper-bundle.min';
 import * as S from './styles';
 
 import graphicriver from '../../images/graphicriver.png';
-import audiojungle from '../../images/audiojungle.png';
-import themeforest from '../../images/themeforest.png';
-import codecanyon from '../../images/codecanyon.png';
+// import audiojungle from '../../images/audiojungle.png';
+// import themeforest from '../../images/themeforest.png';
+// import codecanyon from '../../images/codecanyon.png';
 
 SwiperCore.use([Navigation]);
 
@@ -66,7 +66,7 @@ const Logos = () => {
         {clients.length ? (
           clients.map((item) => (
 
-            <SwiperSlide>
+            <SwiperSlide key={item.id}>
               <img src={graphicriver} alt="" />
             </SwiperSlide>
           ))

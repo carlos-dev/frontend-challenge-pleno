@@ -7,15 +7,15 @@ import 'swiper/swiper-bundle.min';
 
 import * as S from './styles';
 
-import speedometer from '../../images/speedometer.png';
-import card from '../../images/card.png';
-import safeBox from '../../images/safeBox.png';
+// import speedometer from '../../images/speedometer.png';
+// import card from '../../images/card.png';
+// import safeBox from '../../images/safeBox.png';
 
 SwiperCore.use([Navigation]);
 
 const Boxes = () => {
   const [services, setServices] = useState([]);
-  const arrayImage = [speedometer, card, safeBox];
+  // const arrayImage = [speedometer, card, safeBox];
 
   useEffect(() => {
     fetch('http://localhost:3000/services', {
