@@ -6,6 +6,8 @@ import SwiperCore, { Navigation } from 'swiper/core';
 import 'swiper/swiper-bundle.min.css';
 import 'swiper/swiper-bundle.min';
 
+import Loading from '../Loading';
+
 import * as S from './styles';
 
 SwiperCore.use([Navigation]);
@@ -22,7 +24,6 @@ const Boxes = () => {
       .then((json) => setServices(json));
   }, []);
 
-  console.log(services);
   return (
     <S.Content>
       {services.length ? (
@@ -50,7 +51,7 @@ const Boxes = () => {
           ))}
         </Swiper>
       ) : (
-        <span>carregando...</span>
+        <Loading />
       )}
     </S.Content>
   );
