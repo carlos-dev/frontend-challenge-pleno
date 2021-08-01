@@ -179,9 +179,9 @@ export const MenuHamburger = styled.div`
   left: 4vmin;
   top: 4vmin;
   z-index: 3;
-  background: #43D9CE;
+  background: #43D9CEaa;
   padding: 1vmin;
-  
+
   @media (max-width: 1080px) {
     display: block;
   }

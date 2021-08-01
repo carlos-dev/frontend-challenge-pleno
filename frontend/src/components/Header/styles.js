@@ -1,16 +1,21 @@
 import styled from 'styled-components';
 
 export const Header = styled.header`
-  background: rgb(22,225,204);
-  background: -moz-linear-gradient(101deg, rgba(22,225,204,1) 0%, rgba(158,34,245,1) 100%);
-  background: -webkit-linear-gradient(101deg, rgba(22,225,204,1) 0%, rgba(158,34,245,1) 100%);
-  background: linear-gradient(101deg, rgba(22,225,204,1) 0%, rgba(158,34,245,1) 100%);
+  background: ${(props) => (props.colors[0])};
+  background: -moz-linear-gradient(101deg, ${(props) => (props.colors[0])} 0%, ${(props) => (props.colors[1])} 100%);
+  background: -webkit-linear-gradient(101deg, ${(props) => (props.colors[0])} 0%, ${(props) => (props.colors[1])} 100%);
+  background: linear-gradient(101deg, ${(props) => (props.colors[0])} 0%, ${(props) => (props.colors[1])} 100%);
+  background: linear-gradient(101deg, ${(props) => (props.colors[0])} 0%, ${(props) => (props.colors[1])} 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#16e1cc",endColorstr="#9e22f5",GradientType=1);
   height: 100vmin;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+
+  .swiper-button-next:after, .swiper-button-prev:after {
+    font-size: 7vmin;
+  }
 `;
 
 export const ContentHeader = styled.div`
@@ -42,7 +47,7 @@ export const Text = styled.p`
   color: #fff;
   text-align: center;
   font-size: 3vmin;
-  width: 84%;
+  width: 66%;
   margin: 5vmin 0 10vmin;
 `;
 
