@@ -58,4 +58,10 @@ export const BtnSubmit = styled.button`
   border-radius: 0.2rem;
   font-family: 'Roboto', sans-serif;
   font-size: 2.6vmin;
+  transition-duration: 0.5s;
+
+    :hover {
+      transform: scale(0.8);
+      transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.3);
+    }
 `;
