@@ -17,6 +17,10 @@ export const Logo = styled.a`
 
   span {
     font-size: 2.6vmin;
+
+    @media (max-width: 1080px) {
+      font-size: 3.6vmin;
+    }
   }
 `;
 
@@ -46,6 +50,7 @@ export const Link = styled.a`
 
   @media (max-width: 1080px) {
     margin: 1vmin 0;
+    font-size: 3vmin;
   }
 `;
 
