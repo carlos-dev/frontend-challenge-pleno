@@ -47,6 +47,25 @@ export const Link = styled.a`
   color: #b7b7b7;
   font-size: 2.3vmin;
   margin-right: 4vmin;
+  position: relative;
+
+  ::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 100%;
+    bottom: -0.5vmin;
+    background: #b7b7b7;
+    height: 0.2vmin;
+    border-radius: 0.8vmin;
+    transition-property: right;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+  }
+
+  :hover::before {
+    right: 0;
+  }
 
   @media (max-width: 1080px) {
     margin: 1vmin 0;
